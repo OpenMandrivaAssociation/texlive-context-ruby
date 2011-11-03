@@ -1,3 +1,9 @@
+# revision 23167
+# category ConTeXt
+# catalog-ctan /macros/context/contrib/context-ruby
+# catalog-date 2010-01-28 13:16:16 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-context-ruby
 Version:	20100128
 Release:	1
@@ -46,6 +52,7 @@ parameters.
 %files
 %{_texmfdistdir}/tex/context/third/ruby/t-ruby.tex
 %doc %{_texmfdistdir}/doc/context/third/ruby/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,3 +63,5 @@ parameters.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
