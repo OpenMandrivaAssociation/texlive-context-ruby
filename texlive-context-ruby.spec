@@ -5,8 +5,8 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-context-ruby
-Version:	20121130
-Release:	9
+Version:	20170414
+Release:	1
 Summary:	Ruby annotations in ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-ruby
