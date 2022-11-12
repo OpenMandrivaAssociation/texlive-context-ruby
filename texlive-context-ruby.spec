@@ -1,18 +1,12 @@
-# revision 28434
-# category ConTeXt
-# catalog-ctan /macros/context/contrib/context-ruby
-# catalog-date 2012-11-30 11:03:17 +0100
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-context-ruby
-Version:	20170414
-Release:	2
+Version:	47085
+Release:	1
 Summary:	Ruby annotations in ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-ruby
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-ruby.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-ruby.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-ruby.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-ruby.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,23 +21,21 @@ simple ruby in ConTeXt. The position and layout of the base
 text and the ruby text can becontrolled by parameters.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/context/third/ruby/t-ruby.mkii
-%{_texmfdistdir}/tex/context/third/ruby/t-ruby.mkiv
-%{_texmfdistdir}/tex/context/third/ruby/t-ruby.mkvi
-%doc %{_texmfdistdir}/doc/context/third/ruby/README
+%{_texmfdistdir}/tex/context/third/ruby
+%doc %{_texmfdistdir}/doc/context/third/ruby
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
