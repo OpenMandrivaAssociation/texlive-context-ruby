@@ -3,7 +3,7 @@ Version:	47085
 Release:	2
 Summary:	Ruby annotations in ConTeXt
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-ruby
+URL:		https://www.ctan.org/tex-archive/macros/context/contrib/context-ruby
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-ruby.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-ruby.doc.r%{version}.tar.xz
